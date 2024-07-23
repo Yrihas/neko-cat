@@ -1,0 +1,296 @@
+local plr = game.Players.LocalPlayer
+
+if game.ReplicatedStorage:FindFirstChild("NekoGUI") == nil then
+local scr = Instance.new("ScreenGui")
+scr.Parent = game.ReplicatedStorage scr.Name = "NekoGUI"
+local fr = Instance.new("Frame")
+fr.Parent = scr fr.Active = true fr.Draggable = true
+fr.Size = UDim2.new(0,390,.8,0) fr.BackgroundColor3 = Color3.fromRGB(250,250,250)
+fr.Position = UDim2.new(1,-390,.2,0) fr.BackgroundTransparency = 0.3 fr.BorderSizePixel = 2
+local header1 = Instance.new("TextLabel",fr) header1.Name = "this script was originally made by Crabway"
+header1.Position = UDim2.new(0.02,0,0,0) header1.TextSize = 75 header1.Text = "?????"
+header1.Size = UDim2.new(0.9,0,0.1,0) header1.BackgroundTransparency = 1 header1.TextXAlignment = "Left"
+header1.Font = "ArialBold"
+local header2 = Instance.new("TextLabel",fr)
+header2.Position = UDim2.new(0.06,0,0,-3) header2.TextSize = 24 header2.Text = "script by \n Crabway"
+header2.Size = UDim2.new(0.92,0,0.1,0) header2.BackgroundTransparency = 1 header2.TextXAlignment = "Right"
+header2.Font = "ArialBold"
+local close = Instance.new("TextButton",fr) close.BackgroundColor3 = Color3.fromRGB(255, 164, 164)
+close.Size = UDim2.new(1,0,0,25) close.Position = UDim2.new(0,0,.1,5) close.Font = "ArialBold"
+close.TextSize = 16 close.Text = "Minimize GUI" close.BackgroundTransparency = 0.2 close.Name = "close"
+local desc = Instance.new("TextLabel",fr) desc.BackgroundTransparency = 1
+desc.Size = UDim2.new(1,0,.15,0) desc.Position = UDim2.new(0.02,0,.1,30) desc.Font = "SourceSans"
+desc.TextXAlignment = "Left" desc.TextYAlignment = "Top" desc.TextWrapped = true
+desc.TextSize = 26 desc.Text = "You are an adorable floating neko ball of destruction! This GUI can be dragged anywhere on your screen (or minimized)."
+local fl = Instance.new("TextButton",fr) fl.Name = "f1"
+fl.Size = UDim2.new(0,25,0,100) fl.Position = UDim2.new(0.02,0,.25,22) fl.Text = "&lt;" fl.TextSize = 27
+fl.Font = "ArialBold" fl.BackgroundColor3 = Color3.fromRGB(250,250,250) fl.BackgroundTransparency = 0.6
+local f2 = Instance.new("TextButton",fr) f2.Name = "f2"
+f2.Size = UDim2.new(0,25,0,100) f2.Position = UDim2.new(0.02,125,.25,22) f2.Text = ">" f2.TextSize = 27
+f2.Font = "ArialBold" f2.BackgroundColor3 = Color3.fromRGB(250,250,250) f2.BackgroundTransparency = 0.6
+local face = Instance.new("ImageLabel",fr) face.Name = "Face"
+face.Size = UDim2.new(0,100,0,100) face.Position = UDim2.new(0.02,25,.25,22)
+face.BackgroundColor3 = Color3.fromRGB(250,250,250) face.BackgroundTransparency = 0.6
+--face.Image = plr.Character.Head:FindFirstChildOfClass("Decal").Texture
+local fl = Instance.new("TextLabel",face)
+fl.Size = UDim2.new(1,0,0,20) fl.Position = UDim2.new(0,0,1,-20) fl.TextSize = 15
+fl.BackgroundTransparency = 1 fl.Text = "Current Face" fl.Font = "ArialBold"
+local fc = Instance.new("TextLabel",face) fc.Name = "fc"
+fc.Size = UDim2.new(0,15,0,15) fc.Position = UDim2.new(0,7,0,0) fc.TextSize = 15
+fc.BackgroundTransparency = 1 fc.Text = "1/7" fc.Font = "ArialBold"
+local s1 = Instance.new("TextLabel",fr) s1.Name = "s1"
+s1.Size = UDim2.new(0,50,0,45) s1.Position = UDim2.new(0.02,160,.25,22) s1.Text = "< E xss=removed s1.Font = "ArialBold" xss=removed xss=removed xss=removed speed.Name = "speed" xss=removed xss=removed speed.Text = "1" xss=removed speed.Font = "ArialBold" xss=removed xss=removed xss=removed speed.TextYAlignment = "Top" xss=removed xss=removed xss=removed xss=removed sl.Text = "Current Speed" sl.Font = "ArialBold" xss=removed s2.Name = "s2" xss=removed xss=removed s2.Text = "Q >" xss=removed s2.Font = "ArialBold" xss=removed xss=removed xss=removed xss=removed xss=removed rain.Text = "Disco Mode" xss=removed rain.Font = "ArialBold" xss=removed xss=removed xss=removed ron.Name = "ron" xss=removed xss=removed ron.Text = "On" xss=removed ron.Font = "ArialBold" xss=removed xss=removed xss=removed roff.Name = "roff" xss=removed xss=removed roff.Text = "Off" xss=removed roff.Font = "ArialBold" xss=removed xss=removed xss=removed xss=removed xss=removed bc.Text = "Ball Color" xss=removed bc.Font = "ArialBold" xss=removed xss=removed xss=removed c1.Name = "c1" xss=removed xss=removed xss=removed c1.Text = "" xss=removed xss=removed c2.Name = "c2" xss=removed xss=removed xss=removed c2.Text = "" xss=removed xss=removed c3.Name = "c3" xss=removed xss=removed xss=removed c3.Text = "" xss=removed xss=removed c4.Name = "c4" xss=removed xss=removed xss=removed c4.Text = "" xss=removed xss=removed c5.Name = "c5" xss=removed xss=removed xss=removed c5.Text = "" xss=removed xss=removed c6.Name = "c6" xss=removed xss=removed xss=removed c6.Text = "" xss=removed xss=removed c7.Name = "c7" xss=removed xss=removed xss=removed c7.Text = "" xss=removed xss=removed sep.Name = "Divider" sep.Image = "rbxassetid://546990373" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed hl.Text = "Health" xss=removed hl.Font = "ArialBold" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed hb.Text = "" xss=removed xss=removed bar.Name = "bar" xss=removed xss=removed xss=removed bar.Text = "" xss=removed xss=removed hp.Name = "hp" xss=removed xss=removed xss=removed xss=removed hp.Text = "6900 / 6900 HP" hp.Font = "Arial" xss=removed skills.Name = "skills" xss=removed xss=removed xss=removed sk1.Text = "Click" xss=removed sk1.Font = "Code" xss=removed xss=removed xss=removed xss=removed xss=removed sk2.Text = "Spacebar" xss=removed sk2.Font = "Code" xss=removed xss=removed xss=removed xss=removed xss=removed sk3.Text = "Press X" xss=removed sk3.Font = "Code" xss=removed xss=removed xss=removed xss=removed xss=removed sk4.Text = "Press C" xss=removed sk4.Font = "Code" xss=removed xss=removed xss=removed d1.Name = "d1" xss=removed xss=removed d1.Text = "Super Lasers" xss=removed d1.Font = "ArialBold" xss=removed xss=removed xss=removed d2.Name = "d2" xss=removed xss=removed d2.Text = "Gift Drop" xss=removed d2.Font = "ArialBold" xss=removed xss=removed xss=removed d3.Name = "d3" xss=removed xss=removed d3.Text = "Weeb Attack" xss=removed d3.Font = "ArialBold" xss=removed xss=removed xss=removed d4.Name = "d4" xss=removed xss=removed d4.Text = "Fish Slap" xss=removed d4.Font = "ArialBold" xss=removed xss=removed xss=removed txt.Name = "Chat" xss=removed xss=removed txt.Text = "" xss=removed txt.Font = "SourceSansItalic" xss=removed xss=removed xss=removed txt.TextYAlignment = "Top" txt.PlaceholderText = "Type here" xss=removed say.Name = "Say" xss=removed xss=removed say.Text = "Say" xss=removed say.Font = "ArialBold" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed>= (plr.Character.Humanoid.Health)/3
+
+local gui = plr.PlayerGui:FindFirstChild("NekoGUI").Frame
+local children = plr.Character:GetChildren()
+for i = 1, #children do
+ if children[i].Name ~= "Head" and children[i]:IsA("BasePart") or children[i]:IsA("MeshPart") then
+    children[i].Transparency = 1
+  elseif children[i]:IsA("Accessory") then
+ children[i]:Destroy()
+ end
+end if plr.Character.Head:FindFirstChildOfClass("BillboardGui") ~= nil then
+       plr.Character.Head.BillboardGui:Destroy() end
+game.Workspace:FindFirstChild(""..plr.Name.."").Archivable = true 
+if game.ReplicatedStorage:FindFirstChild("Dummy") ~= nil then print("ok") else
+ --and plr.Character.Humanoid.Health >= (plr.Character.Humanoid.Health)/3  then
+local dummy = game.Workspace:FindFirstChild(""..plr.Name..""):Clone() dummy.Parent = game.ReplicatedStorage dummy.Name = "Dummy" --copy a dummy
+local human = game.ReplicatedStorage:FindFirstChild("Dummy",true)
+
+for i,child in pairs(human:GetChildren()) do
+ if child:IsA("Pants") or child:IsA("Shirt") or child:IsA("ShirtGraphic") or child:IsA("Accessory") or child:IsA("ForceField") or child:IsA("BillboardGui") then
+  child:Destroy()
+ end
+end
+
+local config = {BrickColor.new("Pastel brown"),"rbxassetid://617393449","rbxassetid://1189026152",
+ "rbxassetid://366273095","rbxassetid://1018844485","rbxassetid://1018847510",0}
+
+human.Name = "Dummy"
+human.Head.BrickColor = config[1]
+human.Torso.BrickColor = config[1] human.Torso.Transparency = config[7]
+human:FindFirstChild("Left Arm").BrickColor = config[1] human:FindFirstChild("Left Arm").Transparency = config[7]
+human:FindFirstChild("Right Arm").BrickColor = config[1] human:FindFirstChild("Right Arm").Transparency = config[7]
+human:FindFirstChild("Left Leg").BrickColor = config[1] human:FindFirstChild("Left Leg").Transparency = config[7]
+human:FindFirstChild("Right Leg").BrickColor = config[1] human:FindFirstChild("Right Leg").Transparency = config[7]
+end
+
+hair2 = function(Character)
+local Hair = Instance.new("Part")
+Hair.Parent = Character
+Hair.Name = "anime"
+Hair.Size = Vector3.new(0.1, 0.1, 0.1)
+Hair.CFrame = Character.Head.CFrame
+Hair:BreakJoints()
+Hair.CanCollide = false
+Hair.BrickColor = BrickColor.new("New Yeller")
+Hair.TopSurface = "Smooth"
+Hair.BottomSurface = "Smooth"
+local Weld = Instance.new("Weld")
+Weld.Name = "Weld"
+Weld.Part0 = Character.Head
+Weld.Part1 = Hair
+Weld.Parent = Character.Head
+Weld.C0 = CFrame.new(0, -1.4, 0.2)*CFrame.fromEulerAnglesXYZ(0.1, 0, 0)
+local Mesh = Instance.new("SpecialMesh")
+Mesh.Parent = Hair Mesh.Name = "HairMesh"
+Mesh.MeshId = "rbxassetid://1389678629"
+Mesh.TextureId = "rbxassetid://73139980"
+Mesh.Scale = Vector3.new(0.050, 0.050, 0.050)
+end
+
+local ball = plr.Character.Head:FindFirstChildOfClass("SpecialMesh")
+ball.MeshType = "Sphere" ball.Parent.Transparency = 0.9
+ball.Parent.BrickColor = BrickColor.new("Institutional white") ball.Parent.Material = "SmoothPlastic"
+for i = 1,9 do
+wait() ball.Scale = Vector3.new(0.8*(1+i),0.8*(2+(2*i)),0.8*(2+(2*i)))
+ball.Parent.Transparency = ball.Parent.Transparency - 0.1
+end if gui:FindFirstChildOfClass("TextLabel") ~= nil then print("successfully became neko!") end
+plr.Character.Humanoid.DisplayDistanceType = "None"
+ball.Parent:FindFirstChildOfClass("Decal").Texture = "rbxassetid://260195370"
+plr.Character:FindFirstChild("Body Colors").HeadColor = BrickColor.new("Institutional white")
+local faces = {260195370,207366753,604931496,317101586,317101448,617393449,299971458}
+plr.Character.Humanoid.MaxHealth = 6900 plr.Character.Humanoid.Health = plr.Character.Humanoid.MaxHealth
+
+local ears = Instance.new("Part",ball.Parent.Parent) ears.Name = "Handle" ears.Anchored = true
+ears.CanCollide = false ears.Transparency = 0.3 ears.Size = Vector3.new(1, 0.8, 1)
+ears.Size = Vector3.new(15, 14.8, 16.4)
+
+local mesh = Instance.new("SpecialMesh",ears) mesh.MeshId = "http://www.roblox.com/asset/?id=1374148"
+mesh.TextureId = "http://www.roblox.com/asset/?id=413143035" mesh.MeshType = "FileMesh"
+mesh.Scale = Vector3.new(12,12,9) mesh.Offset = Vector3.new(0,6,0)
+if plr.Character.Head:FindFirstChild("pack") == nil then
+local imagechoice = Instance.new("StringValue",plr.Character.Head) imagechoice.Value = "vec"
+imagechoice.Name = "pack" end
+if plr.Character.Head:FindFirstChild("panda") == nil then
+local pandas = Instance.new("BoolValue",plr.Character.Head) pandas.Value = true
+pandas.Name = "panda" end
+local sounds = {"rbxassetid://225020499","rbxassetid://426232201","rbxassetid://777598950"}
+if plr.Character.Head:FindFirstChild("nya1") == nil then
+for ny = 1,3 do
+local sound1 = Instance.new("Sound",plr.Character.Head) sound1.Name = "nya" .. ny sound1.EmitterSize = 16
+sound1.SoundId = sounds[ny]
+end
+end plr.Character.Head.nya3.PlaybackSpeed = 1.4
+
+local f = 1
+gui.Face.Image = plr.Character:FindFirstChild("Head"):FindFirstChildOfClass("Decal").Texture
+gui.f1.MouseButton1Down:connect(function()
+ f = f - 1 
+ if f == 1 then gui.Face.Image = "rbxassetid://" .. faces[1]
+ elseif f == 2 then gui.Face.Image = "rbxassetid://" .. faces[2]
+ elseif f == 3 then gui.Face.Image = "rbxassetid://" .. faces[3]
+ elseif f == 4 then gui.Face.Image = "rbxassetid://" .. faces[4]
+ elseif f == 5 then gui.Face.Image = "rbxassetid://" .. faces[5]
+ elseif f == 6 then gui.Face.Image = "rbxassetid://" .. faces[6]
+ elseif f == 7 then gui.Face.Image = "rbxassetid://" .. faces[7]
+ elseif f == 0 then f = 7 gui.Face.Image = "rbxassetid://" .. faces[7]
+ end
+ gui.Face.fc.Text = f .. "/7"
+ plr.Character:FindFirstChild("Head"):FindFirstChildOfClass("Decal").Texture = gui.Face.Image
+end)
+gui.f2.MouseButton1Down:connect(function()
+ f = f + 1 
+ if f == 2 then gui.Face.Image = "rbxassetid://" .. faces[2]
+ elseif f == 3 then gui.Face.Image = "rbxassetid://" .. faces[3]
+ elseif f == 4 then gui.Face.Image = "rbxassetid://" .. faces[4]
+ elseif f == 5 then gui.Face.Image = "rbxassetid://" .. faces[5]
+ elseif f == 6 then gui.Face.Image = "rbxassetid://" .. faces[6]
+ elseif f == 7 then gui.Face.Image = "rbxassetid://" .. faces[7]
+ elseif f == 8 then f = 1 gui.Face.Image = "rbxassetid://" .. faces[1]
+ end
+ gui.Face.fc.Text = f .. "/7"
+ plr.Character:FindFirstChild("Head"):FindFirstChildOfClass("Decal").Texture = gui.Face.Image
+ if plr.Character.Head:FindFirstChild("remedy") == nil then
+  local remedy = Instance.new("StringValue",plr.Character.Head) remedy.Name = "remedy"
+  if remedy.Value ~= "ok" then
+ print("btw you can't see your face because you're always facing away from the camera - if you want to see it, just spin your camera fast")
+       remedy.Value = "ok"
+    end
+    end
+end)
+
+gui.ron.MouseButton1Down:connect(function()
+ if gui.ron.BackgroundColor3 ~= Color3.fromRGB(171, 255, 148) then
+  gui.ron.BackgroundColor3 = Color3.fromRGB(171, 255, 148)
+  gui.roff.BackgroundColor3 = Color3.fromRGB(250,250,250)
+  if plr.Character.Head:FindFirstChild("rain") == nil then
+   local ping = Instance.new("IntValue",plr.Character.Head) ping.Name = "rain"
+   local glow = Instance.new("PointLight",plr.Character.Head) glow.Name = "glow"
+   glow.Range = 16
+   local i = 0
+   while i &lt;= 360 do
+            wait()
+            if i < 360 xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed mouse.Icon = "rbxassetid://184589683" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed> 0 then gui.speed.TextColor3 = Color3.fromRGB(0,0,0) end
+elseif key:lower() == "e" then spd = spd - 1
+ gui.s1.BackgroundColor3 = Color3.fromRGB(255, 164, 164) wait(.1)
+ gui.s1.BackgroundColor3 = Color3.fromRGB(250,250,250)
+ gui.speed.Text = spd if spd &lt;= 0 then gui.speed.TextColor3 = Color3.fromRGB(200,10,10)
+        else gui.speed.TextColor3 = Color3.fromRGB(0,0,0) end
+elseif key:lower() == " " then
+ local dicey = math.random(1,8) if dicey ~= 8 then
+gui.skills.d2.BackgroundColor3 = Color3.fromRGB(255, 164, 164) 
+gui.skills.d2.TextTransparency = 0.5 wait(.1)
+ gui.skills.d2.BackgroundColor3 = Color3.fromRGB(250,250,250)
+ gui.skills.d2.TextTransparency = 0
+if plr.Character.Head:FindFirstChild("nya2") ~= nil then
+ plr.Character.Head.nya2:Play()
+end
+local humann = game.ReplicatedStorage:FindFirstChild("Dummy",true):Clone()
+local config2 = {BrickColor.new("Pastel brown"),"rbxassetid://617393449","rbxassetid://1189026152",
+ "rbxassetid://366273095","rbxassetid://1018844485","rbxassetid://1018847510",
+        "rbxassetid://217903516","rbxassetid://231514477","rbxassetid://648887959",
+     "rbxassetid://22828283","rbxassetid://15431991","rbxassetid://251988595",
+     "rbxassetid://324421595","rbxassetid://468148440","rbxassetid://725860978",
+     "rbxassetid://725879270","rbxassetid://566518281","rbxassetid://1276814558",
+     "rbxassetid://1041920022","rbxassetid://756532964","rbxassetid://1082645451",
+     "rbxassetid://723072866","rbxassetid://408358623","rbxassetid://1508076370",
+     "rbxassetid://1508075679"}
+humann.Parent = workspace humann.Name = "Cute Girl"
+local d1 = math.random(1,8) if d1 == 1 then
+humann.Head:FindFirstChildOfClass("Decal").Texture = config2[2] elseif d1 == 2 then
+humann.Head:FindFirstChildOfClass("Decal").Texture = config2[3] elseif d1 == 3 or d1 == 4 then
+humann.Head:FindFirstChildOfClass("Decal").Texture = config2[9] elseif d1 >= 5 and d1 &lt;= 7 then
+humann.Head:FindFirstChildOfClass("Decal").Texture = config2[10] else
+humann.Head:FindFirstChildOfClass("Decal").Texture = config2[11] end
+humann.Humanoid.Health = 100 humann.Humanoid.MaxHealth = 100
+local hairan = math.random(1,4) 
+if hairan == 1 then
+local hair = Instance.new("Accessory",humann) hair.Name = "anime" local han = Instance.new("Part",hair)
+local mesa = Instance.new("SpecialMesh",han) mesa.MeshType = "FileMesh" han.CanCollide = false
+han.Size = Vector3.new(1.67, 2.38, 1.7) han.Position = humann.Head.Position + Vector3.new(0,0.6,0)
+local att = Instance.new("Weld",han) att.Part0 = han att.Part1 = humann.Head mesa.Name = "HairMesh"
+mesa.MeshId = "http://www.roblox.com/asset/?id=164382853" mesa.Offset = Vector3.new(-0.05, -0.55, 0.05)
+mesa.TextureId = "rbxassetid://73139980"
+elseif hairan == 2 or hairan == 3 then
+ hair2(humann)
+elseif hairan == 4 then local hair = Instance.new("Accessory",humann) hair.Name = "anime" local han = Instance.new("Part",hair)
+local mesa = Instance.new("SpecialMesh",han) mesa.MeshType = "FileMesh" han.CanCollide = false
+han.Size = Vector3.new(1.67, 2.38, 1.7) han.Position = humann.Head.Position + Vector3.new(0,0.6,0)
+local att = Instance.new("Weld",han) att.Part0 = han att.Part1 = humann.Head mesa.Name = "HairMesh"
+mesa.MeshId = "http://www.roblox.com/asset/?id=398618628" mesa.Offset = Vector3.new(-0.05, -0.7, 0.7)
+mesa.TextureId = "rbxassetid://73139980"
+end
+local pants = Instance.new("Pants",humann) humann.Humanoid.HealthDisplayType = 2
+local d2 = math.random(1,14)
+if d2 < 3 xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed chr.Name = "Mesh" BodyPart = "LeftArm" MeshId = "376541126" BodyPart = "RightArm" MeshId = "303665872" BodyPart = "LeftLeg" MeshId = "303665905" BodyPart = "RightLeg" MeshId = "303665804" BodyPart = "Torso" MeshId = "319346857" xss=removed xss=removed xss=removed px.Texture = "rbxassetid://241778280" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed bomb.Shape = "Ball" xss=removed bomb.Material = "Neon" xss=removed xss=removed xss=removed xss=removed tex.Font = "ArialBold" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed tex.Text = "?????!" xss=removed xss=removed tex.Text = "It's a trap!" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed debris.Shape = "Ball" xss=removed tip.TextLabel.Text = "\(^?^)/" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed dec.Texture = "rbxassetid://" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed bill.Name = "FBI" xss=removed xss=removed img.ScaleType = "Slice" xss=removed xss=removed xss=removed shot.Name = "bakapaka" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed img.Image = "rbxassetid://" xss=removed xss=removed xss=removed img.Image = "rbxassetid://" xss=removed xss=removed xss=removed img.Image = "rbxassetid://" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed after.ImageLabel.ScaleType = "Stretch" xss=removed xss=removed xss=removed xss=removed xss=removed bubble.Name = "bubs" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed text.Font = "ArialBold" xss=removed text.TextXAlignment = "Center" xss=removed text.Text = "???!" xss=removed text.Text = "????!" text.Text = "??~" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed after.ImageLabel.ScaleType = "Stretch" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed img.ScaleType = "Slice" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed img.Image = "rbxassetid://" xss=removed xss=removed xss=removed img.Image = "rbxassetid://" xss=removed xss=removed xss=removed img.Image = "rbxassetid://" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed pack.Value = "etc" xss=removed gui.skills.d3.Text = "now using box images" xss=removed xss=removed xss=removed gui.skills.d3.Text = "Weeb Attack" xss=removed pack.Value = "bw" xss=removed gui.skills.d3.Text = "now using pink images" xss=removed xss=removed xss=removed gui.skills.d3.Text = "Weeb Attack" xss=removed pack.Value = "vec" xss=removed gui.skills.d3.Text = "now using render images" xss=removed xss=removed xss=removed gui.skills.d3.Text = "Weeb Attack" pack.Value = "vec" xss=removed xss=removed xss=removed xss=removed xss=removed gui.skills.d3.Text = "danbooru off" xss=removed xss=removed xss=removed gui.skills.d3.Text = "Weeb Attack" xss=removed xss=removed gui.skills.d3.Text = "danbooru on" xss=removed xss=removed xss=removed gui.skills.d3.Text = "Weeb Attack" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed laser.Material = "Neon" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed mesh.MeshType = "FileMesh" mesh.MeshId = "rbxassetid://433116596" mesh.TextureId = "rbxassetid://148913500" xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed xss=removed gui.close.Text = "Open GUI" xss=removed xss=removed xss=removed> 0.24 then
+   closing[close].Visible = false
+  elseif closing[close].ClassName == "Folder" then
+   closing[close].Parent = plr.PlayerGui
+  end
+  gui.Size = UDim2.new(0,390,.2,0)  gui.Position = UDim2.new(1,-390,.27,0)
+ end
+ else gui.close.Text = "Minimize GUI"
+  gui.close.BackgroundColor3 = Color3.fromRGB(255, 164, 164)
+ local opening = gui:GetChildren()
+ for open = 1,#opening do
+  if opening[open].ClassName ~= "Folder" and opening[open].Position.Y.Scale > 0.24 then
+   opening[open].Visible = true
+  end
+  gui.Size = UDim2.new(0,390,.8,0) gui.Position = UDim2.new(1,-390,.2,0)
+  plr.PlayerGui:FindFirstChild("skills",true).Parent = gui
+ end
+ end
+end)
+
+gui.Say.MouseButton1Down:connect(function()
+ local bubble = Instance.new("BillboardGui",plr.Character.Head)
+ bubble.AlwaysOnTop = true bubble.StudsOffset = Vector3.new(5, 0, 0)
+ bubble.Size = UDim2.new(0,200,0,50) bubble.Name = "bubs"
+ bubble.ExtentsOffset = Vector3.new(-5,math.random(4,6),0)
+ local text = Instance.new("TextLabel",bubble)
+ text.BackgroundTransparency = 1
+ text.Size = UDim2.new(1,0,0,200) text.TextSize = 50
+ text.TextColor3 = Color3.fromRGB(255,135,240)
+ text.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+ text.Font = "ArialBold" local jad = math.random(1,3)
+ text.TextXAlignment = "Center" text.Text = gui.Chat.Text
+ text:TweenPosition(UDim2.new(0,0,0,-math.random(100,195)), "Out", "Linear", 1) game.Debris:AddItem(bubble,4)
+end)
+
+plr.Character.Humanoid.Died:connect(function()
+ ball.Parent.BrickColor = BrickColor.new("Bright red") ears.Anchored = false
+ for i = 1,30 do wait(0.04) ball.Scale = Vector3.new(3*(1+(3*i/5)),3*(2+(2*(3*i/5))),3*(2+(2*(3*i/5)))) 
+ ball.Parent.Transparency = (i/28) if i % 7 == 0 then local deathx = Instance.new("Explosion",plr.Character.Head)
+ deathx.BlastPressure = 0 deathx.Position = ball.Parent.Position + Vector3.new(math.random(-5,5),math.random(-5,5),math.random(-5,5)) end
+ end
+ for aaa = 1,3 do
+ local humand = game.ReplicatedStorage:FindFirstChild("Dummy",true):Clone()
+     humand.Parent = workspace humand.Name = "OwO" humand.Head.Mesh.MeshType = "FileMesh"
+     humand.Head.Mesh.MeshId = "rbxassetid://760924284" humand.Head.Mesh.TextureId = "rbxassetid://760925038" local yummy = humand:GetChildren()
+for y = 1, #yummy do
+ if yummy[y]:IsA("BasePart") and yummy[y].Name ~= "Head" then
+    yummy[y].Transparency = 1
+     elseif yummy[y]:IsA("LocalScript") then yummy[y]:Destroy() end end
+ humand:MoveTo(plr.Character.Head.Position+Vector3.new(math.random(-10,10),math.random(-10,10),math.random(-10,10))) end
+end)
+
+Head.Anchored = true 
+plr.Character.Humanoid.PlatformStand = true 
+plr.Character.Humanoid.Changed:connect(function() 
+plr.Character.Humanoid.PlatformStand = true end) 
+repeat --0.589,6.019,-0.618
+ wait(1/44) 
+ ears.CFrame = CFrame.new(Head.Position + Vector3.new(0.158,0.04,-0.272), game.Workspace.CurrentCamera.CoordinateFrame.p) * CFrame.Angles(0,math.rad(180),0) * CFrame.new((dir.d-dir.a)*spd,0,(dir.s-dir.w)*spd) 
+ Head.CFrame = CFrame.new(Head.Position, game.Workspace.CurrentCamera.CoordinateFrame.p) * CFrame.Angles(0,math.rad(180),0) * CFrame.new((dir.d-dir.a)*spd,0,(dir.s-dir.w)*spd)
+ until nil
